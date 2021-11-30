@@ -1,10 +1,7 @@
-return {
-"hwid here",
-"hwid here",
-"hwid here",
-"hwid here",
-"hwid here",
-"hwid here",
-"hwid here",
-"237ACE8E-EEFF-441E-80CA-29DC5C1866AB",
-}
+local key = _G.Key
+local check = "https://test894728.000webhostapp.com/check.php?key=" .. key
+if game:HttpGet(check) == "Whitelisted" then
+loadstring(game:HttpGet("https://test894728.000webhostapp.com/script.lua"))()
+else
+game.Players.LocalPlayer:Kick("You are Not Whitelisted on DXHOOK.")
+end
